@@ -3,6 +3,7 @@ node_js:
 - '8'
 script:
 - eval "$(ssh-agent -s)"
+- ssh-keyscan -H 92.53.78.240 >> ~/.ssh/known_hosts
 - chmod 600 $HOME/.ssh/technopark
 - ssh-add $HOME/.ssh/technopark
 - npm run build
