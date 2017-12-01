@@ -3,6 +3,7 @@ node_js:
 - '8'
 script:
 - eval "$(ssh-agent -s)"
+- chmod 600 $HOME/.ssh/technopark
 - ssh-add $HOME/.ssh/technopark
 - npm run build
 - scp -r ./dist root@92.53.78.240:~/
